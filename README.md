@@ -6,7 +6,7 @@ BS COMPUTER SCIENCE
 
 
 
-LINK:
+LINK: file:///C:/Users/regal/RegalaJP\_Exer2\_100/RegalaJP\_Exer2\_100.html
 
 
 
