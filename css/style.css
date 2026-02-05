@@ -18,7 +18,7 @@ header {
     color: #ffffff;
     padding: 1.5rem 3rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -49,30 +49,16 @@ main {
     max-width: 1000px;
     margin: 3rem auto;
     padding: 0 2rem;
-}
-
-/* ===== SECTIONS ===== */
-section {
-    margin-bottom: 4rem;
-}
-
-section h2 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    color: #1f2933;
-}
-
-section h3 {
-    font-size: 1.2rem;
-    margin-top: 1.5rem;
-    margin-bottom: 0.5rem;
+    display: flex;
+    flex-direction: column; /* stacked vertically by default */
+    align-items: center;    /* center photo & projects horizontally */
 }
 
 /* ===== HOME / FEATURED IMAGE ===== */
 #home {
     display: flex;
     justify-content: center;
-    margin-top: 2rem;
+    margin-bottom: 3rem;
 }
 
 #home img {
@@ -83,12 +69,65 @@ section h3 {
 }
 
 /* ===== PROJECTS ===== */
+#projects {
+    width: 100%;
+    max-width: 800px;
+    text-align: center;   /* center the projects list */
+    margin-bottom: 4rem;
+}
+
 #projects ul {
-    margin-left: 1.5rem;
+    list-style: none;
+    padding-left: 0;
+    margin-top: 1rem;
 }
 
 #projects li {
     margin-bottom: 1rem;
+}
+
+/* ===== TWO-COLUMN LAYOUT (Skills + About) ===== */
+#skills,
+#about {
+    width: 100%;
+    margin-bottom: 3rem;
+}
+
+@media (min-width: 900px) {
+    /* Wrap skills and about in side-by-side layout */
+    main {
+        align-items: stretch; /* remove centering for columns */
+    }
+
+    #skills,
+    #about {
+        display: flex;
+        flex-direction: column;
+        width: 48%; /* roughly half each */
+    }
+
+    /* Flex container to place them side by side */
+    main {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    /* Wrap Skills and About together */
+    #skills,
+    #about {
+        margin: 0;
+    }
+
+    /* Create a wrapper row for side-by-side */
+    #skills-about-wrapper {
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+        width: 100%;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
 }
 
 /* ===== SKILLS ===== */
