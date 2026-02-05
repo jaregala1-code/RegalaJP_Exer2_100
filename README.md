@@ -6,13 +6,19 @@ BS COMPUTER SCIENCE
 
 
 
-LINK: 
+LINK:
 
 
 
-STEPS ON HOW TO CREATE A GITHUB PAGE: 
+STEPS ON HOW TO CREATE A GITHUB PAGE:
+
+* create a repository
+* push local repository
+* go to repository settings
+* click pages and slect branch main and folder root
 
 
 
-KEY TAKEAWAYS: 
+KEY TAKEAWAYS:
 
+* git will be either my biggest ally or enemy this sem
